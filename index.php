@@ -7,7 +7,9 @@
     <body>
         <?php
             $plik = @fopen("plik.txt", "r") or die ("Błąd pliku!");
-            echo fgets($plik);
+            while( !feof($plik)){
+                echo fgets($plik) . "<br/>";
+            }
             fclose($plik);
         ?>
     </body>
